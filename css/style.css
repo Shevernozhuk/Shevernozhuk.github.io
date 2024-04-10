@@ -247,4 +247,96 @@ padding: 78px 0;
 img {
     max-width: 100%;
     height: auto;
+}
+
+.bg-color-tomate{
+    background-color:#FCF0F0;
+}
+#slider-tomato {
+    text-align: center;
+    background-size: 100% auto;
+    margin-top: 20px;
+}
+
+.header-white{
+    padding-bottom: 20px;
+}
+
+.about-tomato{
+    padding: 45px 0px;
+}
+
+.title-tomato{
+    font-weight: bold;
+    font-size: 44px;
+    color: #324950;
+}
+.text-tomato {
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 162.7%;
+    color: #324950;
+}
+
+.borderleft-line {
+    border-left: 5px solid #EB5757; 
+    border-radius: 3px;
+    width: 0px;
   }
+.text-with-borderleft, .white-table{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.white-table{
+    margin-left: -20px;
+    background-color: white;
+    padding: 15px 30px;
+}
+.text-with-borderleft p{
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.white-table-text {
+    margin-right: 20px; 
+    width: 33%;
+}
+.white-table-text h4{
+    color: #324950;
+    line-height: 162.7%;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.white-table-text:last-child {
+    margin-right: 0;
+}
+
+
+.wrapper-tomato {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1127px;
+    width:100%;
+    margin:0 auto;
+}
+
+.tomato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px
+}
+.tomato img {
+    max-width: 92%;
+    height: auto;
+}
+.tomato p{
+    text-align: center;
+    color: #57984C;
+    background-color: #fff;
+    margin: 0;
+    width: 92%;
+}
