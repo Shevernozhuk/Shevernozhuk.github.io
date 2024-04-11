@@ -249,7 +249,7 @@ img {
     height: auto;
 }
 
-.bg-color-tomate{
+.bg-color-tomato{
     background-color:#FCF0F0;
 }
 #slider-tomato {
@@ -329,6 +329,9 @@ img {
     align-items: center;
     margin-top: 20px
 }
+.tomato a{
+    display: contents;
+}
 .tomato img {
     max-width: 92%;
     height: auto;
@@ -339,4 +342,109 @@ img {
     background-color: #fff;
     margin: 0;
     width: 92%;
+}
+.tomato p a{  
+    color: #57984C;
+}
+
+.bg-tomatoone{
+    position: relative;
+    background: url(../images/Tomato.png) no-repeat center;
+    background-color: #F7F7F7; 
+    padding-bottom: 220px; 
+    z-index: 0;
+}
+
+.back-tomatoall a{
+    font-size: 14px;
+    color: #57984C;
+    text-decoration: none;
+}
+.back-tomatoall p{
+    margin: 0;
+    padding: 20px 0;
+}
+.header-shadow{
+    padding-bottom: 20px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 1;
+}
+.content-tomatoone{
+    display: flex;
+    flex-direction: row;
+}
+.content-tomatoone h1{
+    font-size: 54px;
+    color: #57984C;
+    margin: 0;
+    margin-bottom: 44px;
+    line-height: 148%;
+}
+.text-right-tomatoone{
+    display: flex;
+    align-items: center;
+    margin-top: 44px;
+}
+.text-right-tomatoone span{
+    font-size: 30px;
+    font-weight: bold;
+    color: #CF2333;
+    margin-left: 35px;
+}
+.title-tomatoone{
+    color: #57984C;
+    width: 26%;
+    margin-top: 44px;
+}
+.title-tomatoone hr{
+    border-top: 1px solid #57984C;
+    width: 100%;
+}
+.characteristics-text{
+    font-size: 17px;
+    color: #324950;
+}
+.ul-tomatoone{
+    color: #324950;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+.ul-tomatoone li{
+    margin-bottom: 15px;
+    color: #57984C
+}
+.ul-tomatoone li span{
+    color: #324950
+}
+.text-tomatoone{
+    color: #324950;
+}
+
+.pdf-download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 32px;
+    margin-top: 30px;
+    border-radius: 25px;
+    border: 3px solid #57984C;
+    color: #57984C;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    /* height: 55px;
+    width: 225px; */
+}
+
+.pdf-icon::before {
+    content: url('../images/pdf.png'); /* Replace with the path to your PDF icon image */
+    margin-right: 20px;
+}
+
+.img-tomato{
+ width: 100%;
+}
+.btn-pdf-tomato{
+    text-align: end;
 }
