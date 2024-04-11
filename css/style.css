@@ -438,7 +438,7 @@ img {
 }
 
 .pdf-icon::before {
-    content: url('../images/pdf.png'); /* Replace with the path to your PDF icon image */
+    content: url('../images/pdf.png');
     margin-right: 20px;
 }
 
