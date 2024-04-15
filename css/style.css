@@ -252,9 +252,8 @@ img {
 .bg-color-tomato{
     background-color:#FCF0F0;
 }
-#slider-tomato {
-    text-align: center;
-    background-size: 100% auto;
+
+#slider-img {
     margin-top: 20px;
 }
 
@@ -445,4 +444,102 @@ img {
 }
 .btn-pdf-tomato{
     text-align: end;
+}
+
+.bg-color-contactus{
+    background-color:#E5E5E5;
+    padding-bottom: 30px;
+}
+
+.title-contactus{
+    font-weight: bold;
+    font-size: 44px;
+    color: #324950;
+}
+
+form{
+    margin-top: 35px;
+    color:#324950 ;
+}
+
+.forma-contactus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.forma-contactus .forma-content:first-child{
+    width: 30%;
+}
+.forma-contactus .forma-content:last-child{
+    width: 55%;
+}
+.forma-items{
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea{
+    font-family: 'Roboto Slab', serif;
+    color: #324950;
+}
+
+input[type=text], input[type=email],
+select, textarea
+{
+    border-radius: 8px;
+    border-style: none;
+    border: #dadada 1px solid;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+textarea{
+    resize: none;
+}
+.submit-forma-contactus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.submit-forma-contactus input[type=text]{
+    margin: 0;
+    width: 33%;
+}
+input[type=submit]{
+    cursor: pointer;
+    color: white;
+    border-radius: 25px;
+    background-color:#57984C ;
+    border-style: none;
+    padding: 0 20px;
+    width: 33%;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #324950;
+    line-height: 150%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.address hr{
+    width: 9em;
+    border-top: 1px solid #57984C;
+    margin: 10px 0;
+}
+.address p{
+    margin: 0;
+    font-size: 17px;
+}
+.address a{
+    text-decoration: none;
+    color: #57984C;
+}
+.address span{
+    font-size: 20;
+    font-weight: bold;
+    color: #57984C;
 }
