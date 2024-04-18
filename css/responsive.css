@@ -1,6 +1,6 @@
 @media (max-width: 1200px){
     .wrapper{
-        max-width: 50%;
+        max-width: 85%;
     }
     .w-2 {
         width: 100%;
@@ -170,9 +170,6 @@
     }
 }
 @media (max-width: 768px){
-    .wrapper{
-        max-width: 85%;
-    }
     #categories{
         padding: 0;
         padding-bottom: 20px;
