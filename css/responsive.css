@@ -170,6 +170,9 @@
     }
 }
 @media (max-width: 768px){
+    .wrapper{
+        max-width: 85%;
+    }
     #categories{
         padding: 0;
         padding-bottom: 20px;
@@ -209,9 +212,6 @@
 
 }
 @media (max-width: 320px){
-    .wrapper{
-        max-width: 85%;
-    }
     #slider h1, .title{
         font-size: 32px;
     }
