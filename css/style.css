@@ -2,10 +2,11 @@ body{
     margin: 0;
     font-family: 'Roboto Slab', serif;
 }
-.wrapper{ 
+.wrapper{
     max-width: 1127px;
     width:100%;
     margin:0 auto;
+    padding: 0 15px;
 }
 .row::after{
     clear:both;
@@ -35,6 +36,21 @@ body{
 .w-7{ 
     width: 14.28%;
     float:left;
+}
+.nav{
+   position: relative;
+   height: 100vh;
+   background: url(../images/bg.jpg) no-repeat center;
+   background-size: cover;
+   padding-top: 20px;
+}
+.nav-other{
+    position: relative;
+    padding-top: 20px;
+}
+.nav-other .wrapper{
+    position: relative;
+    z-index: 1;
 }
 .align-right{
     text-align:right;
@@ -93,11 +109,24 @@ body{
 #menu ul li a:hover{
     color: #57984C;
 } 
+#burger-btn{
+    display: none;
+}
+.nav .wrapper{
+    position: relative;
+    z-index: 1;
+}
 #slider{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background: url(../images/bg.jpg) no-repeat center;
-    padding: 338px 0;
-    margin-top: -133px;
 }       
 #slider h1{
     color: #735440;
@@ -109,17 +138,15 @@ body{
     background-color: #57984C;
     color: #fff;
     font-size: 16px;
-    text-align: center;
     width: 160px;
     height: 55px;
     line-height: 55px;
-    margin: 0 auto;
     text-decoration: none;
 }  
 #categories{
     text-align: center;
     padding: 45px 0;
-    max-width: 1600px;
+    /* max-width: 1600px; */
     margin: 0 auto;
 }
 #categories .row{
@@ -159,10 +186,7 @@ body{
     text-align: left;
     margin-right: 30px;
 }
-.text-wrapper {
-    text-align: left;
-    margin-right: 30px;
-}
+
 .text-content{
     color: #324950;
     margin: 0;
@@ -255,10 +279,6 @@ img {
 
 #slider-img {
     margin-top: 20px;
-}
-
-.header-white{
-    padding-bottom: 20px;
 }
 
 .about-tomato{
