@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/script.js" defer></script>
     <title>Contact us</title>
 </head>
 <body>
@@ -52,7 +55,16 @@
           <div class="wrapper">
           <h1 class="title-contactus">Contact us</h1>
           <p class="crosses">×××××</p>
-  
+            
+          <div class="cart-wrapper" id="cabbage-app" v-if="cartVisible">
+            <div class="cart-item" v-for="item in product">
+              <div class="w-4"><img v-bind:src="item.image" alt="item.title"></div>
+              <div class="w-4">{{item.title}}</div>
+              <div class="w-4">{{item.short_text}}</div>
+              <div class="w-4" @click.prevent="removeFromCart(item.id)"><button class="btn-no-style">×</button></div>
+            </div>
+          </div>
+
           <form action="#">
             <div class="forma-contactus">
               <div class="forma-content">
@@ -149,6 +161,5 @@
         </div>
         <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
     </div>
-    <script src="../js/script.js"></script>
 </body>
 </html>

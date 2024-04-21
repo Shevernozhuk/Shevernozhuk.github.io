@@ -243,6 +243,11 @@
     .bg-tomatoone{
         padding-bottom: 100px;
     }
+    
+    .cart-item{
+        width: 100%;
+        padding: 10px 0px 10px 10px
+    }
 
 }
 
@@ -273,6 +278,9 @@
     input[type=submit]{
         width: 100%;
         line-height: 325%;
+    }
+    .cart-wrapper{
+        font-size: 12px;
     }
 
 }

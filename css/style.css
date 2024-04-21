@@ -563,3 +563,36 @@ input[type=submit]{
     font-weight: bold;
     color: #57984C;
 }
+
+.cart-wrapper{
+    display: flex;
+    flex-direction:column;
+    max-width: 1127px;
+    width:100%;
+    font-size: 17px;
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #324950;
+    width: 50%;
+    text-align: center
+}
+
+.cart-item img{
+    max-width: 92%;
+    height: auto;
+}
+.cart-item button{
+    text-align: center;
+    font-size: 40px;
+    color:#EB5757;
+    cursor: pointer;
+}
+.btn-no-style{
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}

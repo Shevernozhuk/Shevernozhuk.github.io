@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: "#tomatoall-app",
+    el: "#cabbage-app",
     data:{
         products:[
             {id:1,title:"Cabbage_1",short_text:"short_text",image:'../images/cabbage_1.jpg',
@@ -59,11 +59,27 @@ var app = new Vue({
             }}
         ],
         product:[],
-        btnVisible: 0
+        cart:[],
+        // contactFields:[{
+        //     name: "",
+        //     companyName: "",
+        //     position: "",
+        //     city: "",
+        //     country: "",
+        //     telephone: "",
+        //     email: "",
+        //     youAre: "",
+        //     otherSpecify: "",
+        //     interested: "",
+        //     capcha: ""
+        // }],
+        btnVisible: 0,
+        cartVisible:0
     },
     mounted:function(){
         this.getProduct();
         this.checkInCart();
+        this.getCart();
     },
     methods:{
         getProduct:function(){
@@ -77,19 +93,42 @@ var app = new Vue({
             }
         },
         addToCart:function(id){
-            var cart = [];
             if(window.localStorage.getItem('cart')){
-                cart=window.localStorage.getItem('cart').split(',');
+                this.cart=window.localStorage.getItem('cart').split(',');
             }
 
-            if(cart.indexOf(String(id))==-1){
-                cart.push(id);
-                window.localStorage.setItem('cart',cart.join());
+            if(this.cart.indexOf(String(id))==-1){
+                this.cart.push(id);
+                window.localStorage.setItem('cart',this.cart.join());
                 this.btnVisible=1;
             }
         },
         checkInCart:function(){
             if(this.product && this.product.id && window.localStorage.getItem('cart').split(',').indexOf(String(this.product.id))!=-1) this.btnVisible=1;
+            if (window.localStorage.getItem('cart') !== null) this.cartVisible = 1;
+        },
+        getCart:function(){
+            if(window.localStorage.getItem('cart')){
+                this.cart=window.localStorage.getItem('cart').split(',');
+                for(var value of this.cart){
+                    for(var index in this.products){
+                        if(value == this.products[index].id ){
+                            this.product.push(this.products[index])
+                        }
+                    }
+                }
+            }
+        },
+        removeFromCart:function(id){
+            for(var index in this.product){
+                if(id ==  this.product[index].id){
+                    this.product.splice(index,1);
+                    this.cart.splice(index,1)
+                }
+            }
+            window.localStorage.setItem('cart', this.cart.join(','));
+            this.getCart();
+            location.reload();
         }
     },
 });
