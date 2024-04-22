@@ -121,7 +121,7 @@
                     <div class="submit-forma-contactus">
                         <img src="../images/capcha.png" alt="capcha">
                         <input type="text" name="capcha" v-model="contactFields.capcha" required>
-                        <input type="submit" value="Send Message">
+                        <input type="submit" value="Send Message" :disabled="formSubmitted">
                     </div>
                 </div>
                 </div>

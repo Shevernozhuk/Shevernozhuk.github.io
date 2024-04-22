@@ -74,7 +74,8 @@ var app = new Vue({
             capcha: ""
         }],
         btnVisible: 0,
-        cartVisible:0
+        cartVisible:0,
+        formSubmitted: false
     },
     mounted:function(){
         this.getProduct();
@@ -146,6 +147,8 @@ var app = new Vue({
             
             this.cart = [];
             window.localStorage.removeItem('cart');
+            alert("Вашу заявку відправлено. Натисніть ОК, щоб оновити сторінку.");
+            location.reload();
         }
     },
 });
