@@ -60,19 +60,19 @@ var app = new Vue({
         ],
         product:[],
         cart:[],
-        // contactFields:[{
-        //     name: "",
-        //     companyName: "",
-        //     position: "",
-        //     city: "",
-        //     country: "",
-        //     telephone: "",
-        //     email: "",
-        //     youAre: "",
-        //     otherSpecify: "",
-        //     interested: "",
-        //     capcha: ""
-        // }],
+        contactFields:[{
+            name: "",
+            companyName: "",
+            position: "",
+            city: "",
+            country: "",
+            telephone: "",
+            email: "",
+            youAre: "",
+            otherSpecify: "",
+            interested: "",
+            capcha: ""
+        }],
         btnVisible: 0,
         cartVisible:0
     },
@@ -129,6 +129,23 @@ var app = new Vue({
             window.localStorage.setItem('cart', this.cart.join(','));
             this.getCart();
             location.reload();
+        },
+        makeOrder:function(){
+            console.log('Name:', this.contactFields.name);
+            console.log('Company Name:', this.contactFields.companyName);
+            console.log('Position:', this.contactFields.position);
+            console.log('City:', this.contactFields.city);
+            console.log('Country:', this.contactFields.country);
+            console.log('Telephone:', this.contactFields.telephone);
+            console.log('Email:', this.contactFields.email);
+            console.log('You are a:', this.contactFields.youAre);
+            console.log('Other specify:', this.contactFields.otherSpecify);
+            console.log('Interested in:', this.contactFields.interested);
+            console.log('Capcha:', this.contactFields.capcha);
+            
+            
+            this.cart = [];
+            window.localStorage.removeItem('cart');
         }
     },
 });

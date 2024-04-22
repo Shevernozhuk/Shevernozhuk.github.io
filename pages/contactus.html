@@ -56,76 +56,78 @@
           <h1 class="title-contactus">Contact us</h1>
           <p class="crosses">×××××</p>
             
-          <div class="cart-wrapper" id="cabbage-app" v-if="cartVisible">
-            <div class="cart-item" v-for="item in product">
-              <div class="w-4"><img v-bind:src="item.image" alt="item.title"></div>
-              <div class="w-4">{{item.title}}</div>
-              <div class="w-4">{{item.short_text}}</div>
-              <div class="w-4" @click.prevent="removeFromCart(item.id)"><button class="btn-no-style">×</button></div>
+          <div id="cabbage-app">
+            <div class="cart-wrapper"  v-if="cartVisible">
+              <div class="cart-item" v-for="item in product">
+                <div class="w-4"><img v-bind:src="item.image" alt="item.title"></div>
+                <div class="w-4">{{item.title}}</div>
+                <div class="w-4">{{item.short_text}}</div>
+                <div class="w-4" @click.prevent="removeFromCart(item.id)"><button class="btn-no-style">×</button></div>
+              </div>
             </div>
-          </div>
 
-          <form action="#">
-            <div class="forma-contactus">
-              <div class="forma-content">
+            
+            <form @submit.prevent="makeOrder">
+              <div class="forma-contactus">
+                <div class="forma-content">
+                  <div class="forma-items">
+                    <label for="Name">Name *</label>
+                    <input type="text" name="Name" v-model="contactFields.name" required>
+                </div>
                 <div class="forma-items">
-                  <label for="Name">Name *</label>
-                  <input type="text" name="Name" required>
-              </div>
-              <div class="forma-items">
-                  <label for="Company_Name">Company Name *</label>
-                  <input type="text" name="Company_Name" required>
-              </div>
-              <div class="forma-items">
-                  <label for="Position">Position *</label>
-                  <input type="text" name="Position" required>
-              </div>
-              <div class="forma-items">
-                  <label for="City">City *</label>
-                  <input type="text" name="City" required>
-              </div>
-              <div class="forma-items">
-                  <label for="Country">Country *</label>
-                  <input type="text" name="Country" required>
-              </div>
-              <div class="forma-items">
-                  <label for="Telephone">Telephone *</label>
-                  <input type="text" name="Telephone" required>
-              </div>
-              <div class="forma-items">
-                  <label for="Email">Email *</label>
-                  <input type="email" name="Email" required>
-              </div>
-              </div>
-              <div class="forma-content">
+                    <label for="Company_Name">Company Name *</label>
+                    <input type="text" name="Company_Name" v-model="contactFields.companyName" required>
+                </div>
                 <div class="forma-items">
-                  <label for="You_are_a">You are a *</label>
-                  <select name="You_are_a" required>
-                      <option value="">Select...</option>
-                      <option value="seed_producer">seed producer</option>
-                      <option value="seed_2">seed 2</option>
-                      <option value="seed_3">seed 3</option>
-                  </select>
+                    <label for="Position">Position *</label>
+                    <input type="text" name="Position" v-model="contactFields.position" required>
+                </div>
+                <div class="forma-items">
+                    <label for="City">City *</label>
+                    <input type="text" name="City" v-model="contactFields.city" required>
+                </div>
+                <div class="forma-items">
+                    <label for="Country">Country *</label>
+                    <input type="text" name="Country" v-model="contactFields.country" required>
+                </div>
+                <div class="forma-items">
+                    <label for="Telephone">Telephone *</label>
+                    <input type="text" name="Telephone" v-model="contactFields.telephone" required>
+                </div>
+                <div class="forma-items">
+                    <label for="Email">Email *</label>
+                    <input type="email" name="Email" v-model="contactFields.email" required>
+                </div>
+                </div>
+                <div class="forma-content">
+                  <div class="forma-items">
+                    <label for="You_are_a">You are a *</label>
+                    <select name="You_are_a" v-model="contactFields.youAre" required>
+                        <option value="seed_producer">seed producer</option>
+                        <option value="seed_2">seed 2</option>
+                        <option value="seed_3">seed 3</option>
+                    </select>
+                </div>
+                <div class="forma-items">
+                    <label for="Other_specify">If other, please specify *</label>
+                    <input type="text" name="Other_specify" v-model="contactFields.otherSpecify" required>
+                </div>
+                <div class="forma-items">
+                    <label for="Interested">You are interested in *</label>
+                    <textarea name="Interested" cols="30" rows="16" v-model="contactFields.interested" required></textarea>
+                </div>
+                <div class="forma-items">
+                    <label for="capcha">Please type this code *</label>
+                    <div class="submit-forma-contactus">
+                        <img src="../images/capcha.png" alt="capcha">
+                        <input type="text" name="capcha" v-model="contactFields.capcha" required>
+                        <input type="submit" value="Send Message">
+                    </div>
+                </div>
+                </div>
               </div>
-              <div class="forma-items">
-                  <label for="Other_specify">If other, please specify *</label>
-                  <input type="text" name="Other_specify" required>
-              </div>
-              <div class="forma-items">
-                  <label for="Interested">You are interested in *</label>
-                  <textarea name="Interested" cols="30" rows="16" required></textarea>
-              </div>
-              <div class="forma-items">
-                  <label for="capcha">Please type this code *</label>
-                  <div class="submit-forma-contactus">
-                      <img src="../images/capcha.png" alt="capcha">
-                      <input type="text" name="capcha" required>
-                      <input type="submit" value="Send Message">
-                  </div>
-              </div>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
           </div>
       </div>
       <div class="address">
