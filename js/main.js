@@ -75,7 +75,8 @@ var app = new Vue({
         }],
         btnVisible: 0,
         cartVisible:0,
-        formSubmitted: false
+        formSubmitted: false,
+        formVisible: 1
     },
     mounted:function(){
         this.getProduct();
@@ -132,23 +133,13 @@ var app = new Vue({
             location.reload();
         },
         makeOrder:function(){
-            console.log('Name:', this.contactFields.name);
-            console.log('Company Name:', this.contactFields.companyName);
-            console.log('Position:', this.contactFields.position);
-            console.log('City:', this.contactFields.city);
-            console.log('Country:', this.contactFields.country);
-            console.log('Telephone:', this.contactFields.telephone);
-            console.log('Email:', this.contactFields.email);
-            console.log('You are a:', this.contactFields.youAre);
-            console.log('Other specify:', this.contactFields.otherSpecify);
-            console.log('Interested in:', this.contactFields.interested);
-            console.log('Capcha:', this.contactFields.capcha);
             
+            this.formVisible=0;
+            this.cartVisible=0;
             
             this.cart = [];
             window.localStorage.removeItem('cart');
             alert("Вашу заявку відправлено. Натисніть ОК, щоб оновити сторінку.");
-            location.reload();
         }
     },
 });

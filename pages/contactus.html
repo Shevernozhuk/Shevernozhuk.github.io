@@ -67,7 +67,7 @@
             </div>
 
             
-            <form @submit.prevent="makeOrder">
+            <form @submit.prevent="makeOrder" v-if="formVisible">
               <div class="forma-contactus">
                 <div class="forma-content">
                   <div class="forma-items">
@@ -127,6 +127,21 @@
                 </div>
               </div>
             </form>
+
+            <div v-if="!formVisible">
+              <p>Name: {{contactFields.name}}</p>
+              <p>companyName: {{contactFields.companyName}}</p>
+              <p>Position: {{contactFields.position}}</p>
+              <p>City: {{contactFields.city}}</p>
+              <p>Country: {{contactFields.country}}</p>
+              <p>Telephone: {{contactFields.telephone}}</p>
+              <p>Email: {{contactFields.email}}</p>
+              <p>You are a: {{contactFields.youAre}}</p>
+              <p>Other specify: {{contactFields.otherSpecify}}</p>
+              <p>Interested in: {{contactFields.interested}}</p>
+              <p>Capcha: {{contactFields.capcha}}</p>
+            </div>
+
           </div>
           </div>
       </div>
