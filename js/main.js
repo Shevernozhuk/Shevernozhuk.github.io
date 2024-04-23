@@ -139,7 +139,7 @@ var app = new Vue({
             
             this.cart = [];
             window.localStorage.removeItem('cart');
-            alert("Вашу заявку відправлено. Натисніть ОК, щоб оновити сторінку.");
+            alert("Вашу заявку відправлено. Натисніть ОК.");
         }
     },
 });
